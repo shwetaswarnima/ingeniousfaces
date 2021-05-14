@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
       
 
 }));
-export default function MainContent(){
+export default function MainContent(props){
     const classes = useStyles();
     return(
         
@@ -59,7 +59,7 @@ export default function MainContent(){
                 <Grid item xs={5}>
                     <Toolbar />
                     <div className={classes.cardPadding}>
-                        <CardView name="Program"/>
+                        <CardView name={props.name}/>
                     </div>
                     
                 </Grid>

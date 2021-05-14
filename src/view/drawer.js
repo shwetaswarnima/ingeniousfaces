@@ -53,6 +53,18 @@ const useStyles = makeStyles((theme) => ({
   },
   white: {
     backgroundColor:'white',
+  },
+  linkDecorator:{
+    textDdecoration: 'none',
+    '&:visited':{
+      textDdecoration: 'none',
+    },
+    '&:hover':{
+      textDdecoration: 'none',
+    },
+    '&:active':{
+      textDdecoration: 'none',
+    }
   }
 }));
 
@@ -78,9 +90,9 @@ export default function ClippedDrawer() {
             </ListItem>
             
             {['Program', 'Coaching', 'Collaboration', 'Progress', 'Knowledge', 'Calander'].map((text, index) => (
-              <ListItem button key={text}>
+              <ListItem button key={text} >
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <Link to="/"><ListItemText primary={text} /></Link>
+                <Link to={text} style={{ textDecoration: 'none' }}><ListItemText primary={text} /></Link>
               </ListItem>
             ))}
           </List>
@@ -96,7 +108,30 @@ export default function ClippedDrawer() {
         </div>
       </Drawer>
       <div className={classes.white}>
-        <MainContent name="Program"/>
+        
+        <Switch>
+          <Route path="/Program">
+          <MainContent name="Program"/>
+          </Route>
+          <Route path="/Coaching">
+          <MainContent name="Coaching"/>
+          </Route>
+          <Route path="/Collaboration">
+          <MainContent name="Collaboration"/>
+          </Route>
+          <Route path="/Progress">
+          <MainContent name="Progress"/>
+          </Route>
+          <Route path="/Knowledge">
+          <MainContent name="Knowledge"/>
+          </Route>
+          <Route path="/Calander">
+          <MainContent name="Calander"/>
+          </Route>
+          <Route path="/">
+          <MainContent name="Program"/>
+          </Route>
+        </Switch>
       </div>
       </Router>
       
