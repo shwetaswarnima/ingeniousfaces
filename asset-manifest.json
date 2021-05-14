@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ingeniousfaces/static/css/main.ed0917fa.chunk.css",
-    "main.js": "/ingeniousfaces/static/js/main.007903c2.chunk.js",
-    "main.js.map": "/ingeniousfaces/static/js/main.007903c2.chunk.js.map",
+    "main.js": "/ingeniousfaces/static/js/main.e68d8927.chunk.js",
+    "main.js.map": "/ingeniousfaces/static/js/main.e68d8927.chunk.js.map",
     "runtime-main.js": "/ingeniousfaces/static/js/runtime-main.d3e703e5.js",
     "runtime-main.js.map": "/ingeniousfaces/static/js/runtime-main.d3e703e5.js.map",
     "static/js/2.6879cd94.chunk.js": "/ingeniousfaces/static/js/2.6879cd94.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.d3e703e5.js",
     "static/js/2.6879cd94.chunk.js",
     "static/css/main.ed0917fa.chunk.css",
-    "static/js/main.007903c2.chunk.js"
+    "static/js/main.e68d8927.chunk.js"
   ]
 }
