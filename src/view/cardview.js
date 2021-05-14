@@ -11,7 +11,16 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 const useStyles = makeStyles({
   root: {
-    paddingLeft:'10px'
+    paddingLeft:'0',
+    boxShadow: '0 0 8px #888',
+    borderRadius: '14px',
+  },
+  cardTitleModule: {
+    fontSize: '18px',
+    fontWight: 600,
+    lineHeight: 1.2,
+    color: '#525252',
+    padding: '10px 20px',
   },
   bullet: {
     display: 'inline-block',
@@ -24,6 +33,10 @@ const useStyles = makeStyles({
   pos: {
     marginBottom: 22,
   },
+  spacerHeight: {
+    height: '24px',
+    minHeight: '24px',
+  },
 });
 
 export default function Cardview(props) {
@@ -32,13 +45,13 @@ export default function Cardview(props) {
 
   return (
     <Card className={classes.root}>
-      <CardContent>
-       
-        <Typography variant="h5" component="h2">
+    <Typography variant="h5" component="h2" className={classes.cardTitleModule}>
           {props.name} Overview
         </Typography>
         <Divider></Divider>
-        <Toolbar />
+      <CardContent>
+       
+        <Toolbar className={classes.spacerHeight}/>
         
         {['Market Research', 'Solution Assesment', 'Oppertunity Evaluation', 'Future Readiness'].map((value, index) => (
           <div className={classes.pos}>

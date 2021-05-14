@@ -55,16 +55,15 @@ export default function MainContent(){
             direction="row"
             justify="flex-start"
             alignItems="flex-start"
-            spacing={2}
             >
-                <Grid item xs={4}>
+                <Grid item xs={5}>
                     <Toolbar />
                     <div className={classes.cardPadding}>
                         <CardView name="Program"/>
                     </div>
                     
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={7}>
                     <div className={classes.topMenu}>
                         <Grid
                         container

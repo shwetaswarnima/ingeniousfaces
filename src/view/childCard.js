@@ -12,7 +12,18 @@ import Fab from '@material-ui/core/Fab';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 275,
+    boxShadow: '0 0 8px #888',
+    borderRadius: '14px',
+  },
+  eachCardModule: {
+    backgroundColor: 'transparent',
+  },
+  cardContent: {
+    padding: '0',
+    padding: '0 !important',
+  },
+  titleIcon: {
+    display: 'block',
   },
   bullet: {
     display: 'inline-block',
@@ -20,28 +31,57 @@ const useStyles = makeStyles((theme) => ({
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14,
+    fontSize: 12,
+    fontWeight: 500,
+    textTransform: 'capitalize',
+    color: '#525252',
+    width: 'calc(100% - 20px)',
+    display: 'inline-block',
   },
   pos: {
     marginBottom: 12,
   },
+  iconTitle: {
+    fontSize: '12px',
+    fontWeight: '500',
+    color: '#747474',
+  },
   margin: {
     margin: theme.spacing(1),
+  },
+  icon: {
+    verticalAlign: 'middle',
+    fontSize: '16px',
+    marginRight: '2px',
+  },
+  spanArrow: {
+    color: '#525252',
+    fontSize: '20px',
+    fontWeight: '500',
+  },
+  iconGrid: {
+    boxSizing: 'border-box',
+    paddingRight: '10px',
   },
   myfontSize: {
       fontSize:'small',
       paddingTop:'10px',
   },
   myButton: {
-      backgroundColor:'#D4F5EE',
+      backgroundColor:'#0daeb6',
       display:'flex',
-      borderRadius:'25px',
+      borderRadius:'14px',
       justifyContent: 'center',
       height:'80px',
-      paddingTop:'30px',
+      lineHeight:'86px',
+      color: '#fff',
       "&:hover" :{
         backgroundColor:'#10ADB9',
       },
+  },
+  integerValue: {
+    padding: '0',
+    boxSizing: 'border-box',
   },
 }));
 
@@ -50,8 +90,9 @@ export default function ChildCard(props) {
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
+    <div className={classes.eachCardModule}>
     <Card className={classes.root}>
-      <CardContent>
+      <CardContent className={classes.cardContent}>
        
       <Grid
             container
@@ -60,51 +101,42 @@ export default function ChildCard(props) {
             alignItems="flex-start"
             spacing={2}
             >
-                <Grid item xs={3}>
-                    <div className={classes.myButton}>{props.number}</div>
-                        
-                   
-                    
+                <Grid item xs={3} className={classes.integerValue}>
+                    <div className={classes.myButton}>{props.number}</div>                    
                 </Grid>
-                <Grid item xs={8}>
-                <div>
-                    <Typography variant="h8" component="h4">
-                        {props.name} Overview 
+                <Grid item xs={9}>
+                <div className={classes.titleIcon}>
+                    <Typography variant="h8" component="h4" className={classes.title}>
+                        {props.name} 
                     </Typography>
-                   
+                   <Typography variant="h6" component="span" className={classes.spanArrow}>
+                        >
+                    </Typography>
                 </div>
                 <Grid
                 container
                 direction="row"
                 justify="flex-start"
                 alignItems="flex-start"
-                spacing={2}
                 className={classes.myfontSize}
                 >
-                    <Grid item>
-                         <div><EventSeatIcon />Research</div>
+                    <Grid item className={classes.iconGrid}>
+                         <div className={classes.iconTitle}><EventSeatIcon className={classes.icon} />Research</div>
                     </Grid>
-                    <Grid item>
-                    <div><BatteryCharging50Icon />Self Paced</div>
+                    <Grid item className={classes.iconGrid}>
+                    <div className={classes.iconTitle}><BatteryCharging50Icon className={classes.icon} />Self Paced</div>
                     </Grid>
 
                 </Grid>
-                {/* <div className={classes.myfontSize}> 
-                    
-                    <div><EventSeatIcon />Research</div>
-                    <div><BatteryCharging50Icon />Self Paced</div>
-                </div> */}
-                    
-                </Grid>
-                <Grid item xs={1}>
-                <Typography variant="h6" component="h4">
-                        >
-                    </Typography>
+              
                     
                 </Grid>
                 </Grid>
         
       </CardContent>
+
+    
     </Card>
+    </div>
   );
 }

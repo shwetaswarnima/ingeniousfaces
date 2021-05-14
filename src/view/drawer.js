@@ -13,12 +13,21 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import MainContent from './mainContent'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    fontFamily:'Roboto',
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -39,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
   },
   imageWidth: {
     width:'180px',
-    marginBottom: '80px',
+    paddingTop:'30px',
+    paddingBottom:'50px',
   },
   white: {
     backgroundColor:'white',
@@ -52,7 +62,7 @@ export default function ClippedDrawer() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      
+      <Router>
       <Drawer
         className={classes.drawer}
         variant="permanent"
@@ -60,16 +70,17 @@ export default function ClippedDrawer() {
           paper: classes.drawerPaper,
         }}
       >
-        <Toolbar />
+        
         <div className={classes.drawerContainer}>
           <List>
             <ListItem>
               <img src="logo.png" className={classes.imageWidth}></img>
             </ListItem>
+            
             {['Program', 'Coaching', 'Collaboration', 'Progress', 'Knowledge', 'Calander'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
+                <Link to="/"><ListItemText primary={text} /></Link>
               </ListItem>
             ))}
           </List>
@@ -87,6 +98,7 @@ export default function ClippedDrawer() {
       <div className={classes.white}>
         <MainContent name="Program"/>
       </div>
+      </Router>
       
     </div>
   );
