@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ingeniousfaces/static/css/main.ed0917fa.chunk.css",
-    "main.js": "/ingeniousfaces/static/js/main.0159c818.chunk.js",
-    "main.js.map": "/ingeniousfaces/static/js/main.0159c818.chunk.js.map",
+    "main.css": "/ingeniousfaces/static/css/main.9c09738e.chunk.css",
+    "main.js": "/ingeniousfaces/static/js/main.c5f78c8d.chunk.js",
+    "main.js.map": "/ingeniousfaces/static/js/main.c5f78c8d.chunk.js.map",
     "runtime-main.js": "/ingeniousfaces/static/js/runtime-main.a255efe0.js",
     "runtime-main.js.map": "/ingeniousfaces/static/js/runtime-main.a255efe0.js.map",
     "static/js/2.f424b266.chunk.js": "/ingeniousfaces/static/js/2.f424b266.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.9a4dc792.chunk.js": "/ingeniousfaces/static/js/3.9a4dc792.chunk.js",
     "static/js/3.9a4dc792.chunk.js.map": "/ingeniousfaces/static/js/3.9a4dc792.chunk.js.map",
     "index.html": "/ingeniousfaces/index.html",
-    "static/css/main.ed0917fa.chunk.css.map": "/ingeniousfaces/static/css/main.ed0917fa.chunk.css.map",
+    "static/css/main.9c09738e.chunk.css.map": "/ingeniousfaces/static/css/main.9c09738e.chunk.css.map",
     "static/js/2.f424b266.chunk.js.LICENSE.txt": "/ingeniousfaces/static/js/2.f424b266.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/ingeniousfaces/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a255efe0.js",
     "static/js/2.f424b266.chunk.js",
-    "static/css/main.ed0917fa.chunk.css",
-    "static/js/main.0159c818.chunk.js"
+    "static/css/main.9c09738e.chunk.css",
+    "static/js/main.c5f78c8d.chunk.js"
   ]
 }
