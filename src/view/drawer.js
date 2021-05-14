@@ -110,25 +110,25 @@ export default function ClippedDrawer() {
       <div className={classes.white}>
         
         <Switch>
-          <Route path="/Program">
+          <Route path= {process.env.PUBLIC_URL +"/Program"}>
           <MainContent name="Program"/>
           </Route>
-          <Route path="/Coaching">
+          <Route path={process.env.PUBLIC_URL +"/Coaching"}>
           <MainContent name="Coaching"/>
           </Route>
-          <Route path="/Collaboration">
+          <Route path={process.env.PUBLIC_URL +"/Collaboration"}>
           <MainContent name="Collaboration"/>
           </Route>
-          <Route path="/Progress">
+          <Route path={process.env.PUBLIC_URL +"/Progress"}>
           <MainContent name="Progress"/>
           </Route>
-          <Route path="/Knowledge">
+          <Route path={process.env.PUBLIC_URL +"/Knowledge"}>
           <MainContent name="Knowledge"/>
           </Route>
-          <Route path="/Calander">
+          <Route path={process.env.PUBLIC_URL +"/Calander"}>
           <MainContent name="Calander"/>
           </Route>
-          <Route path="/">
+          <Route path={process.env.PUBLIC_URL +"/"}>
           <MainContent name="Program"/>
           </Route>
         </Switch>
